@@ -4,7 +4,8 @@ title: Up and Runnig
 ---
 
 Test syntax highlighting...
-```javascript
+
+``` javascript
 function sayHi() {
 }
 ```

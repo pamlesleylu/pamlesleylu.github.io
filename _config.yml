@@ -1,9 +1,9 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      true
+markdown:         kramdown
 kramdown:
   input:          GFM
-gems:             [jekyll-paginate]
+highlighter:      rouge
+gems:             [jekyll-paginate,kramdown,rouge]
 
 # Permalinks
 permalink:        pretty
