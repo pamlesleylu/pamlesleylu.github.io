@@ -20,13 +20,67 @@ Not really well-versed in Canvas. I resorted to guessing where changes are neede
 
 Donut charts are just pie charts with a smaller circle in the middle. Pie charts are just overlapping partially filled-circles with different colors.  
 
-Canvas and context...
+### Canvas
 
-To draw a circle...
+To draw a shape in HTML, we will need to use the `<canvas>` element.
+where we draw shapes just like an artist use a clothe for painting picture. fixed-size drawing surface.
+It has a width and a height. with default of 300px (width) to 150px (height).
+JavaScript used to draw the shapes.
 
-To draw a partially filled circles
+### Context
+Canvas has a rendering context where functions for drawing shapes can be called
 
-To draw a half circle and another half circle...
+```javascript
+// get the canvas element
+var canvas = document.getElementById('container');
+
+// get the rendering context of the canvas
+var ctx = canvas.getContext('2d');
+```
+
+Get the canvas DOM element and then retrieve the context by using the `getContext()` method. '2d' is used because we are just concerned with creating a circle.
+
+### Drawing a Circle
+
+To draw a circle, the context can be used.
+
+```javascript
+ctx.beginPath();
+ctx.arc(50, 75, 20, 0, Math.PI * 2, false);
+ctx.stroke();
+ctx.fillStyle = 'rgb(200, 0, 0)';
+ctx.fill();
+```
+
+`beginPath()` - starts a new path. All succeeding drawing commands will be based on the call to beginPath().
+
+`arc()` - draws an arc with the following parameters
+
+1. the x coordinate of the center of the circle
+2. the y coordinate of the center of the circle
+3. the radius
+4. the start angle
+5. the end angle in radiance (e.g., 2 PI is 360 degrees, PI is 180 degrees).
+6. is counterclockwise - if false, the drawing of circle is in a clockwise position from start angle to end angle
+
+`stroke()` - draws the outline of the circles
+
+`fillStyle` - property for the style used when filling the shape
+
+`fill()` - colors the shape
+
+### Circle to Pie
+
+Use the percentages to calculate the start and end angles
+Use different fillStyle to color the different sections of the graph.
+
+### From Pie to Donut
+
+Bigger circle and a smaller circle right smack in the middle of the big circle. Fill color of the smaller circle should be the same as the background color so as to make it look hollow
+
+```javascript
+// write code here
+```
 
 ## Donut Chart in Chart.js
 
