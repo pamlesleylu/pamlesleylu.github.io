@@ -16,7 +16,7 @@ I didn't find any but found that Chart.js generates charts. The library didn't h
 
 ## Circles to Pies
 
-Not really well-versed in Canvas. I resorted to guessing where changes are needed because of presseed for time. I didn't like this so I went ahead and studied basics online.
+Not really well-versed in Canvas. I resorted to guessing where changes are needed because of pressed for time. I didn't like this so I went ahead and studied basics online.
 
 Donut charts are just pie charts with a smaller circle in the middle. Pie charts are just overlapping partially filled-circles with different colors.  
 
@@ -44,13 +44,8 @@ Get the canvas DOM element and then retrieve the context by using the `getContex
 
 To draw a circle, the context can be used.
 
-```javascript
-ctx.beginPath();
-ctx.arc(50, 75, 20, 0, Math.PI * 2, false);
-ctx.stroke();
-ctx.fillStyle = 'rgb(200, 0, 0)';
-ctx.fill();
-```
+<p data-height="268" data-theme-id="23199" data-slug-hash="GZOZKK" data-default-tab="html" data-user="pamlesleylu" class="codepen">See the Pen <a href="http://codepen.io/pamlesleylu/pen/GZOZKK/">Drawing a Circle</a> by Pamela Lu (<a href="http://codepen.io/pamlesleylu">@pamlesleylu</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 `beginPath()` - starts a new path. All succeeding drawing commands will be based on the call to beginPath().
 
