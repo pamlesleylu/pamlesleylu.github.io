@@ -66,16 +66,27 @@ To draw a circle, the context can be used.
 
 ### Circle to Pie
 
-Use the percentages to calculate the start and end angles
-Use different fillStyle to color the different sections of the graph.
+If you think about it, pie charts are just several unclosed circles with different starting and ending points. Each circle is a portioned according to how big the data its representing is against the total of all the data.
+
+Using our previous knowledge of drawing a circle, we can use the same code but with changing start angle (4th parameter of the `arc()` method) and end angle (5th parameter of the `arc()` method).
+
+<p data-height="268" data-theme-id="23199" data-slug-hash="aNqWZV" data-default-tab="result" data-user="pamlesleylu" class="codepen">See the Pen <a href="http://codepen.io/pamlesleylu/pen/aNqWZV/">Circle to Pie Graph</a> by Pamela Lu (<a href="http://codepen.io/pamlesleylu">@pamlesleylu</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+First calculate the sum of the all the data to get the whole piece. amount of each element in the data will show how large the portion of the graph is. This is the ratio of the data to the sum of all the data.
+
+Loop will be created to draw each portion for each data. The starting angle is 0 and the ending angle will be the `data / sum of of all data` * the full angle of the full circle (which is `Math.PI * 2`).
+
+For each loop use a different color to indicate a different data.
 
 ### From Pie to Donut
 
-Bigger circle and a smaller circle right smack in the middle of the big circle. Fill color of the smaller circle should be the same as the background color so as to make it look hollow
+To make the pie chart look like a donut, the needed step is just to create a smaller circle right smack in the middle of the pie chart and filling it with the color of the background or canvas to give it a hollowed center effect.
 
-```javascript
-// write code here
-```
+<p data-height="268" data-theme-id="23199" data-slug-hash="aNqWMa" data-default-tab="result" data-user="pamlesleylu" class="codepen">See the Pen <a href="http://codepen.io/pamlesleylu/pen/aNqWMa/">Pie to Donut</a> by Pamela Lu (<a href="http://codepen.io/pamlesleylu">@pamlesleylu</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+Create a new circle with the x and y axes for the center the same as the the one in the pie graph. Give the new circle a smaller radius to make it smaller and then color it `white` to give it a color the same as the color of the canvas.
 
 ## Donut Chart in Chart.js
 
