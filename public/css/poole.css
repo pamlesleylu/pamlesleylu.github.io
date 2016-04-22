@@ -48,10 +48,9 @@ body {
 }
 
 html {
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11pt !important;
+  /*line-height: 1.5;*/
 }
 @media (min-width: 38em) {
   html {
