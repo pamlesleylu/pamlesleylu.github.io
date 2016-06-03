@@ -26,5 +26,14 @@ don't have to touch terminal
 noone has to do something and tell someone else that they did it
 no communication required between people and you can see the flow
 
+hubot
+works really well json api
+everyone sees the build steps by hubot in campfire (a chatroom)
+
+ChatOps
+building tools that make it easier to operate infrastructure via hubot or terminal
+place tools directly in the middlew of conversation, everyone is pairing all of the time
+teaching by doing is awesome - side effect of putting everything in hubot - make all things visible
+
 source:
 [ChatOps in GitHub](https://www.youtube.com/watch?v=NST3u-GjjFw)
