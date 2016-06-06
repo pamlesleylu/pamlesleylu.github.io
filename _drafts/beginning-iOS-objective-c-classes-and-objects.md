@@ -116,5 +116,48 @@ SimpleClass *aSimpleClassInstance = [[SimpleClass alloc] initWithFirstInt:1 seco
 - NSObject's `init` method can be called by using the `super` keyword.
 - The `if (!self)` condition is used for defensive programming.
 
+## Factory Methods
+Static methods can be defined to create and instantiate an object.
+
+In the header file:
+
+```objective_c
+@interface SimpleClass : NSObject
+{
+  @public
+  int firstInt;
+  int secondInt;
+}
+
++ (id)simpleClassWithFirstInt:(int)firstIntValue secondInt:(int)secondIntValue;
+
+@end
+```
+
+In the implementation file:
+
+```objective_c
+@implementation SimpleClass
+
++ (id)simpleClassWithFirstInt:(int)firstIntValue secondInt:(int)secondIntValue
+{
+  SimpleClass *simpleClass = [[SimpleClass alloc] init];
+  simpleClass->firstInt = firstIntValue;
+  simpleClass->secondInt = secondIntValue;
+
+  return simpleClass;
+}
+@end
+```
+
+- + is used to declare a static method
+- -> is used to refer to a public parameter of an object
+
+To create an instance
+
+```objective_c
+SimpleClass *simpleClass = [SimpleClass simpleClassWithFirstInt:1 secondInt:2];
+```
+
 ## References
 * [Developing iOS 7 Apps for iPhone and iPad](https://itunes.apple.com/en/course/developing-ios-7-apps-for/id733644550)
