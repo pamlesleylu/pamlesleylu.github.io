@@ -139,6 +139,7 @@ The `@synthesize` keyword can be used to change which instance is referred to by
   @synthesize propertyName = instanceName;
 
 @end
+```
 
 ## Pointers as Properties
 
